@@ -4,7 +4,7 @@
 
   <div class="row">
     <!-- Form -->
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-12">
       <form [formGroup]="form" class="form-group" novalidate>
         <div class="form-group excited-cell-configuration">
           <label for="configuration">Initial configuration</label>
@@ -32,8 +32,8 @@
       </form>
     </div>
     <!-- Preview -->
-    <div class="col-md-8 excited-cell-preview">
-      <div *ngIf="initialConfiguration.value" class="excited-cell-preview-initial">
+    <div class="col-md-8 col-sm-12 excited-cell-preview">
+      <div *ngIf="initialConfiguration.value && initialConfiguration.valid" class="excited-cell-preview-initial">
         <h2>Initial</h2>
         <app-cells-preview [configuration]="initialConfiguration.value"></app-cells-preview>
       </div>
