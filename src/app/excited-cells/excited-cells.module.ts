@@ -8,12 +8,15 @@ import { CellsPreviewComponent } from './cells-preview/cells-preview.component';
 
 
 @NgModule({
-  declarations: [ExcitedCellsComponent, CellsPreviewComponent],
+  declarations: [
+    ExcitedCellsComponent,
+    CellsPreviewComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    ExcitedCellsRoutingModule
+    ExcitedCellsRoutingModule,
   ]
 })
 export class ExcitedCellsModule { }
