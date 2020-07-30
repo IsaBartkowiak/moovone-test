@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-cells-preview',
@@ -8,8 +8,8 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
 })
 export class CellsPreviewComponent {
 
-  @Input() configuration: (0 | 1)[];
+  @Input() configuration: string;
 
-  constructor() { }
+  constructor() {}
 
 }
