@@ -28,7 +28,7 @@ export class ExcitedCellsComponent implements OnInit {
   get finalConfiguration(): string {
     if (this.form.valid) {
       const formValues = this.form.value;
-      return this.excitedCellsService.getExcitedCellsFinalState(
+      return this.excitedCellsService.getCellsState(
         formValues.initialConfiguration.split(''),
         formValues.step
       ).join('');

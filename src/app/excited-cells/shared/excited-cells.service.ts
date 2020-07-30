@@ -7,7 +7,10 @@ export class ExcitedCellsService {
 
   constructor() { }
 
-  getExcitedCellsFinalState(cells: number[], step: number): number[] {
+  getCellsState(cells: number[], step: number): number[] {
+    if (!cells) {
+      return;
+    }
     if (!step) {
       return cells;
     }
@@ -19,6 +22,6 @@ export class ExcitedCellsService {
     if (step === 1) {
       return newCellsState;
     }
-    return this.getExcitedCellsFinalState(newCellsState, step - 1);
+    return this.getCellsState(newCellsState, step - 1);
   }
 }
