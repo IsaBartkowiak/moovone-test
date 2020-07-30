@@ -20,6 +20,12 @@ describe('getCellsState', () => {
     expect(service.getCellsState(initialValue, 0)).toEqual(initialValue);
   });
 
+  it('should return if cells is not set', () => {
+    const service: ExcitedCellsService = TestBed.get(ExcitedCellsService);
+    const initialValue = null;
+    expect(service.getCellsState(initialValue, 0)).toBeUndefined();
+  });
+
   it('should return 1,0,1,0 when the initial configuration is 1,0,1,1 and the step is 1', () => {
     const service: ExcitedCellsService = TestBed.get(ExcitedCellsService);
     const initialValue = [1, 0, 1, 1];
