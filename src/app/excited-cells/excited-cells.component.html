@@ -1,0 +1,48 @@
+<div class="excited-cell">
+
+  <h1 class="excited-cell-title">Excited cells</h1>
+
+  <div class="row">
+    <!-- Form -->
+    <div class="col-md-4">
+      <form [formGroup]="form" class="form-group" novalidate>
+        <div class="form-group excited-cell-configuration">
+          <label for="configuration">Initial configuration</label>
+          <input id="configuration" type="text" maxLength="8" formControlName="initialConfiguration"
+            class="form-control" required>
+          <ng-container *ngIf="initialConfiguration.touched || initialConfiguration.dirty">
+            <div *ngIf="initialConfiguration.hasError('required')" class="form-error">
+              Field is required
+            </div>
+            <div *ngIf="initialConfiguration.hasError('pattern')" class="form-error">
+              This field should contains only 1 or 0
+            </div>
+          </ng-container>
+        </div>
+        <div class="form-group">
+          <label for="steps">Steps</label>
+          <select class="form-control" id="steps" formControlName="step" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <!-- Preview -->
+    <div class="col-md-8 excited-cell-preview">
+      <div *ngIf="initialConfiguration.value" class="excited-cell-preview-initial">
+        <h2>Initial</h2>
+        <app-cells-preview [configuration]="initialConfiguration.value"></app-cells-preview>
+      </div>
+
+      <div *ngIf="finalConfiguration">
+        <h2>Result</h2>
+        <app-cells-preview [configuration]="finalConfiguration"></app-cells-preview>
+      </div>
+
+    </div>
+  </div>
+</div>

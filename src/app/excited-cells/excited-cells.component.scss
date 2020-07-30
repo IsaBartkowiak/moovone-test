@@ -1,0 +1,18 @@
+.excited-cell{
+  width: 90%;
+  max-width: 800px;
+  padding-top: 50px;
+  margin: 0 auto;
+  &-title {
+    margin-bottom: 50px;
+  }
+  &-configuration{
+    margin-bottom: 50px;
+  }
+  &-preview {
+    text-align:center;
+    &-initial {
+      margin-bottom: 20px;
+    }
+  }
+}
