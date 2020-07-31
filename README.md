@@ -1,4 +1,4 @@
-# MoovOneTest$
+# MoovOneTest
 
 ## Code
 
@@ -23,15 +23,17 @@ getCellsState(cells: number[], step: number): number[] {
 ```
 
 ## Visual representation 
-https://isabartkowiak.github.io/moovone-test/excited-cells
+
+Angular app :
+https://isabartkowiak.github.io/moovone-test/
 
 ## Algorithm choices explanations
 
 For the resolution of this algorithm, I assumed that the transition occurs according to the state of the 2 neighboring cells such as:
-0 and 0 gives 0
-1 and 1 gives 0
-0 and 1 gives 1
-1 and 0 gives 1
+- 0 and 0 gives 0
+- 1 and 1 gives 0
+- 0 and 1 gives 1
+- 1 and 0 gives 1
 
 Based on this observation, it is possible to subtract the states of the 2 neighboring cells, then to obtain the absolute value to determine the state of the current cell.
 
