@@ -1,4 +1,6 @@
-# MoovOneTest
+# MoovOneTest$
+
+## Code
 
 ```ts
 getCellsState(cells: number[], step: number): number[] {
@@ -19,6 +21,9 @@ getCellsState(cells: number[], step: number): number[] {
     return this.getCellsState(newCellsState, step - 1);
   }
 ```
+
+## Visual representation 
+https://isabartkowiak.github.io/moovone-test/excited-cells
 
 ## Algorithm choices explanations
 
